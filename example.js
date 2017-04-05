@@ -1,13 +1,13 @@
 const Observer = require('./Observer');
-const SUBSCRIPTION_A = 'subscription-of-a';
-const SUBSCRIPTION_B = 'subscription-of-b';
+const SUBSCRIPTION_A = 'subscription-of-component-a-and-c';
+const SUBSCRIPTION_B = 'subscription-of-component-b';
 
-//register Component A
+//register Component A to Subscription A
 Observer.subscribe(SUBSCRIPTION_A, () => {
 	console.log('Component A got triggered');
 });
 
-//register Component B
+//register Component B to Subscription B
 Observer.subscribe(SUBSCRIPTION_B, (data) => {
 	console.log('Component B got triggered');
 	console.log('Received data: ' + data)
